@@ -35,15 +35,16 @@
 
 .article2{
     margin-top: 0px;
+    align-items: center;
 }
 
 .nome{
     text-align: center;
-    margin-left: 2rem;
+    margin-left: 40rem;
     padding-top: 20px;
     font-size: 4rem;
     font-family: sans-serif;
-
+    float: left;
 }
 
 .link{
@@ -54,6 +55,7 @@
 .descricao{
     padding-left: 5vw;
     margin-right: 1rem;
+    clear: both;
 }
 
 .l1{
@@ -84,18 +86,18 @@
     border-radius: 12rem;
     border-width: 0.3rem;
     background-color: lightskyblue;
-    margin-right: 5rem;
 }
 
 @media (max-width: 720px){
 
     .nome{
         text-align: center;
-        margin-left: 2rem;
+        margin-left: 10rem;
         padding-top: 4rem;
         font-size: 2rem;
         font-family: sans-serif;
         font-weight: 700;
+        float: left;
     
     }
 
@@ -105,6 +107,7 @@
         text-align: center;
         line-height: 2rem;
         font-family: 'Courier New', Courier, monospace;
+        clear: both;
     
     }
 
