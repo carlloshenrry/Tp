@@ -8,10 +8,10 @@
     <title> Formulário </title>
 </head>
 
-<body>
+<body class="fundo">
     <h1 class="titulo"> Currículo </h1>
     <form name="curriculo">
-        <h2>1.Dados Pessoais</h2>
+        <h2 class="titulos">1.Dados Pessoais</h2>
 
         <table class="tabela1">
             <tbody>
@@ -46,7 +46,7 @@
 
         <br>
 
-        <h2 class="obj">2. Objetivo</h2> <br>
+        <h2 class="titulos">2. Objetivo</h2> <br>
         <table class="tabela2">
             <tbody>
                 <tr class="linhaobj">
@@ -57,8 +57,7 @@
                         placeholder="Digite seu objetivo"
                         cols="60" rows="8"
                         required 
-                        class="objstyle">  
-                    </textarea>
+                        class="objstyle"></textarea>
                     </td>
                 </tr>
             </tbody>
@@ -66,7 +65,7 @@
 
         <br>
 
-        <h2 class="contato">3. Contato</h2><br>
+        <h2 class="titulos">3. Contato</h2><br>
         <table class="tabela3">
             <tbody>
                 <tr class="linha1">
@@ -78,8 +77,8 @@
                 <tr class="linha1">
                     <th class="textl1c1">Cidade/Estado</th>
                     <td>
-                        <input type="text" name="cidade" placeholder="Digite sua cidade" required class="uf"/> /
-                        <input type="text" name="estado" placeholder="Digite seu estado" required class="uf"/>
+                        <input type="text" name="cidade" placeholder="Digite sua cidade" required class="uf" pattern="[A-Z]{2}"/> /
+                        <input type="text" name="estado" placeholder="Digite seu estado" required class="uf" pattern="[A-Z]{2}" />
                     </td>
                 </tr>
                 <tr class="linha1">
@@ -104,20 +103,20 @@
                 </tr>
                 <tr class="linha1">
                     <th class="textl1c1">Rede Social</th>
-                    <td>
+                    <td class="rdsociais">
                         <img src="./components/face.png" alt="facebook"> http://facebook.com/ 
-                        <input type="text" placeholder="Perfil facebook"> <br>
+                        <input type="text" placeholder="Perfil facebook" class="txtsocial"> <br>
                         <img src="./components/linkedin.png" alt="linkedin"> http://linkedin.com/
-                        <input type="text" placeholder="Perfil linkedin"> <br>
+                        <input type="text" placeholder="Perfil linkedin" class="txtsocial"> <br>
                         <img src="./components/skype.png" alt="skype">
-                        <input type="text" placeholder="Perfil Skype">
+                        <input type="text" placeholder="Perfil Skype" class="txtsocial">
                     </td>
                 </tr>
 
             </tbody>
         </table>
         <br>
-        <h2 class="skill">4. Conhecimentos</h2>
+        <h2 class="titulos">4. Conhecimentos</h2>
 
         <br>
 
@@ -138,7 +137,7 @@
                 <th class="textl1c1">Idiomas</th>
                 <td> Inglês <input type="text" name="idiomaIng" list="nivel" placeholder="Nivel" /> |
                     <datalist id="nivel">
-                        <option value="Iniciante">
+                        <option value="Básico">
                         <option value="Intermediário">
                         <option value="Avançado">
                     </datalist>

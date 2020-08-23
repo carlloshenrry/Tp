@@ -2,15 +2,25 @@
 *{ 
     margin: 0;
     padding: 0; 
-    align-items: center;  
+    align-items: center; 
+}
+
+.fundo{
+    background-color:mintcream; 
 }
 
 .titulo{
     text-align: center;
     font-weight: 700;
+    margin-bottom: 2vw;
     
 }
+
+.titulos{
+    text-align: center;
+}
 /* Referente a Tabela 1 */
+
 .tabela1{
     display: flex;
     justify-content: center;
@@ -21,7 +31,7 @@
 }
 
 .linha1 th{
-    background-color: darkgray;
+    background-color: gray;
     width: 25vw;
 }
 
@@ -44,7 +54,7 @@
     justify-content: center;
 }
 .linhaobj th{
-    background-color: darkgray;
+    background-color: gray;
     width: 25vw;
 }
 
@@ -84,17 +94,18 @@
     justify-content: center;
 }
 
+/*referente  aparte final */
 .resetsub{
     margin-left: 17vw;
     width: 7vw;
-    background-color: blue;
-    color: gainsboro;
+    background-color:#d1f5ef;
+    color: black;
 }
 
 .resetsub2{
     width: 7vw;
-    background-color: blue;
-    color: gainsboro;
+    background-color:#d1f5ef;
+    color: black;
 }
 
 input:required:invalid, input:focus:invalid, textarea:required:invalid, textarea:focus:invalid {
@@ -107,4 +118,112 @@ input:required:valid, textarea:required:valid {
     background: url("./components/check.png") no-repeat;
     background-position: right;
     background-color: white;
+}
+
+@media (max-width: 720px){
+
+    .titulo{
+        font-size: 5vw;
+    }
+    .titulos{
+        text-align: center;
+        font-size: 4vw;
+    }
+    /* Tabela 1*/
+
+    .linha1 th{
+        background-color: gray;
+        width: 35vw;
+        font-size: 2.5vw;
+    }
+    
+    .linha1 td{
+        background-color: whitesmoke;
+        width: 40vw;
+        font-size: 1.9vw;
+    }
+    
+    .stylec2{
+        width: 40vw;
+        font-size: 1.9vw;
+    }
+    
+    .styleselect{
+        width: 40.3vw;
+        font-size: 1.9vw;
+    }
+
+    /*  tabela 2*/
+
+    .linhaobj th{
+        background-color: gray;
+        width: 25vw;
+        font-size: 2.5vw;
+    }
+    
+    .linhaobj td{
+        background-color:whitesmoke;
+        width: 40vw;
+    }
+
+    .objstyle{
+        width:250px;
+        height:50px;
+        max-height: 250px;
+        border: 1.5px solid #000099;
+        resize: vertical;
+        font-family: Garamond,verdana;
+        text-align: left;
+        font-size: 2.5vw;
+    }
+
+    /*   Tabela 3*/
+    .c2tab3{
+        width: 40vw;
+        font-size: 1.9vw;
+    }
+    
+    .uf{
+        width: 15vw;
+        font-size: 1.9vw;
+    }
+    .rdsociais{
+        font-size: 2.5vw;
+    }
+
+    .txtsocial{
+        font-size: 1.9vw;
+    }
+
+    /* Tabela 4*/
+    .tabela4 tr td{
+        font-size: 1.9vw;
+    }
+    .tabela4 tr{
+        font-size: 2.5vw;
+    }
+    .tabela4 tr tr{
+        font-size: 2.5vw;
+    }
+
+    .tabela4 tr tr td{
+        font-size: 1.9vw;
+    }
+
+    /*Parte final*/
+    .resetsub{
+        margin-left: 17vw;
+        width: 7vw;
+        background-color:#d1f5ef;
+        color: black;
+        font-size: 2vw;
+    }
+    
+    .resetsub2{
+        width: 7vw;
+        background-color:#d1f5ef;
+        color: black;
+        font-size: 2vw;
+    }
+    
 }
