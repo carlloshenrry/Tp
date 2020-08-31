@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="./script.js"> </script>
+    <link rel="stylesheet" href="05_form.css">
+    <title> Formulário </title>
+</head>
+
+<body class="fundo">
+    <h1 class="titulo"> Currículo </h1>
+    <form name="curriculo">
+        <h2 class="titulos">1.Dados Pessoais</h2>
+
+        <table class="tabela1">
+            <tbody>
+                <tr class="linha1">
+                    <th class="textl1c1"> Nome</th>
+                    <td> <input type="text" name="nome" placeholder="Digite seu nome" class="stylec2" required> </td>
+                </tr>
+                <tr class="linha1">
+                    <th class="textl1c1"> Data de nascimento</th>
+                    <td> <input type="date" class="stylec2"></td>
+                </tr>
+                <tr class="linha1">
+                    <th class="textl1c1"> Estado Civil</th>`
+                    <td> <select name="estadocivil" class="styleselect">
+                            <option value="" selected disabled hidden>Selecione o estado civil</option>
+                            <option value="1"> Solteiro(a)</option>
+                            <option value="2"> Casado(a)</option>
+                            <option value="4"> Divorciado(a)</option>
+                            <option value="5"> Viúvo(a)</option>
+                        </select>
+                        <span class="red" id="aviso"> </span>
+                    </td>
+                </tr>
+                <tr class="linha1">
+                    <th class="textl1c1"> Sexo</th>
+                    <td>
+                        <input type="radio" name="sexo" value="male" /> Masculino
+                        <input type="radio" name="sexo" value="female" />Feminino
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <h2 class="titulos">2. Objetivo</h2> <br>
+        <table class="tabela2">
+            <tbody>
+                <tr class="linhaobj">
+                    <th class="textl1c1"> Objetivo</th>
+                    <td> <textarea
+                        id="objetivo"
+                        name="objetivo"
+                        placeholder="Digite seu objetivo"
+                        cols="60" rows="8"
+                        required 
+                        class="objstyle"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <h2 class="titulos">3. Contato</h2><br>
+        <table class="tabela3">
+            <tbody>
+                <tr class="linha1">
+                    <th class="textl1c1">Endereço</th>
+                    <td>
+                        <input type="text" name="endereco" placeholder="Digite seu endereço"  class="c2tab3">
+                    </td>
+                </tr>
+                <tr class="linha1">
+                    <th class="textl1c1">Cidade/Estado</th>
+                    <td>
+                        <input type="text" name="cidade" placeholder="Digite sua cidade"  class="uf" pattern="[A-Z]{2}"/> /
+                        <input type="text" name="estado" placeholder="Digite seu estado"  class="uf" pattern="[A-Z]{2}" />
+                    </td>
+                </tr>
+                <tr class="linha1">
+                    <th class="textl1c1">CEP</th>
+                    <td>
+                        <input type="text"  name="CEP" pattern="[0-9]{5}[\S][0-9]{3}"
+                            placeholder="Digite seu CEP no formato 99999-999" class="c2tab3" />
+                    </td>
+                </tr>
+                <tr class="linha1">
+                    <th class="textl1c1">Telefone</th>
+                    <td>
+                        <input type="tel"  name="tel" pattern="[\(][0-9]{2}[\)][\s][0-9]{4}[\-][0-9]{4}"
+                            placeholder="Digite seu telefone no formato (99) 9999-9999" class="c2tab3" />
+                    </td>
+                </tr>
+                <tr class="linha1">
+                    <th class="textl1c1">E-mail</th>
+                    <td>
+                        <input type="email"  name="email" placeholder="Digite seu e-mail" class="c2tab3">
+                    </td>
+                </tr>
+                <tr class="linha1">
+                    <th class="textl1c1">Rede Social</th>
+                    <td class="rdsociais">
+                        <img src="./components/face.png" alt="facebook"> http://facebook.com/ 
+                        <input type="text" placeholder="Perfil facebook" class="txtsocial"> <br>
+                        <img src="./components/linkedin.png" alt="linkedin"> http://linkedin.com/
+                        <input type="text" placeholder="Perfil linkedin" class="txtsocial"> <br>
+                        <img src="./components/skype.png" alt="skype">
+                        <input type="text" placeholder="Perfil Skype" class="txtsocial">
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <br>
+        <h2 class="titulos">4. Conhecimentos</h2>
+
+        <br>
+
+        <table class="tabela4">
+            <tr class="linha1">
+                <th class="textl1c1">Linguagens de Programação</th>
+                <td>
+                    <input type="checkbox"  name="langs"> C/C++ <br>
+                    <input type="checkbox"  name="langs"> Java++ <br>
+                    <input type="checkbox"  name="langs"> Visual Basic <br>
+                    <input type="checkbox"  name="langs"> .Net <br>
+                    <input type="checkbox"  name="langs"> PHP <br>
+                    <input type="checkbox"  name="langs"> Python <br>
+                    <input type="checkbox"  name="langs"> HTML <br>
+                </td>
+            </tr>
+            <tr class="linha1">
+                <th class="textl1c1">Idiomas</th>
+                <td> Inglês <input type="text" name="idiomaIng" list="nivel" placeholder="Nível"/> |
+                    <datalist id="nivel">
+                        <option value="Básico">
+                        <option value="Intermediário">
+                        <option value="Avançado">
+                    </datalist>
+
+                    Espanhol <input type="text" name="idiomaEsp" list="nivel" placeholder="Nível" />
+
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <input type="button" value="Limpar" class="resetsub" onclick="cleann();"> |
+        <input type="button" value="Enviar" class="resetsub2" onclick="verifica();">
+    </form>
+</body>
+
+</html>
